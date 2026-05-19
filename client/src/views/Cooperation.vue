@@ -102,7 +102,6 @@
         </div>
 
         <p class="text-sm text-gray-400 mt-5">{{ localizedWechatHint }}</p>
-        <p class="text-xs text-gray-500 mt-3">{{ localizedNote }}</p>
       </div>
     </section>
   </div>
@@ -115,17 +114,13 @@ import { Clock3, Handshake, Mail, QrCode, Send, Sparkles } from 'lucide-vue-next
 import heroBackground from '../assets/cooperation/contact-hero-bg.png'
 import serviceIcon from '../assets/cooperation/contact-service.png'
 import phoneIcon from '../assets/cooperation/contact-phone.png'
-import qrCode from '../assets/cooperation/contact-qr.svg'
+import qrCode from '../assets/erweimav1.jpg'
 import { cooperationContact } from '../config/contact'
 
 const { t, locale } = useI18n()
 
 const localizedWechatHint = computed(() =>
   locale.value === 'en' ? cooperationContact.wechatHint.en : cooperationContact.wechatHint.zh
-)
-
-const localizedNote = computed(() =>
-  locale.value === 'en' ? cooperationContact.note.en : cooperationContact.note.zh
 )
 </script>
 

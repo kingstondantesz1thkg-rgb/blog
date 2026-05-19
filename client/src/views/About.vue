@@ -6,7 +6,8 @@
         <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-primary to-secondary animate-spin-slow opacity-50 blur-xl"></div>
         <div class="relative w-full h-full rounded-full bg-gradient-to-tr from-primary to-secondary p-1 shadow-2xl">
           <div class="w-full h-full rounded-full bg-darker flex items-center justify-center overflow-hidden border-4 border-darker">
-            <User class="w-20 h-20 text-gray-400" />
+            <img v-if="avatarUrl" :src="avatarUrl" alt="Avatar" class="w-full h-full object-cover" />
+            <User v-else class="w-20 h-20 text-gray-400" />
           </div>
         </div>
       </div>
@@ -107,6 +108,7 @@ import { User, Code2, CheckCircle2, Briefcase, Rocket, Building2, Trophy } from 
 import { useI18n } from 'vue-i18n'
 import { getExperiences } from '../api/content'
 import type { Experience } from '../types/content'
+import avatarUrl from '../assets/touxiangv1.jpg'
 import {
   getExperienceAchievement,
   getExperienceDescription,
